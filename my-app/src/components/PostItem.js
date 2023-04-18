@@ -2,9 +2,9 @@ import React from 'react'
 import css from './css/Content.module.css'
 import {savedPosts} from '../posts.json'
 
-export default function PostItem() {
+export default function PostItem(props) {
   return (
-          savedPosts.map( post =>  {
+          props.savedPosts.map( post =>  {
                 return (
                   <div  className={css.SearchResults} key={post.title}>
                     <p>Title: {post.title}</p>
